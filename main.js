@@ -22,6 +22,10 @@ new Vue({
         itsDone: function(index) {
             this.listToDo[index].done === true;
         },
+
+        deleteTask: function (index) {
+            this.listToDo.splice(index, 1)
+        }
     }
 
 })

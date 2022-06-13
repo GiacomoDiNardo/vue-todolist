@@ -32,7 +32,7 @@
                                             :class="{'text-decoration-line-through text-secondary': task.done}"
                                             >
                                             {{task.text}}
-                                            <button type="button" class="btn my-btn btn-outline-danger">&times;</button>
+                                            <button type="button" class="btn my-btn btn-outline-danger" @click="deleteTask(i)">&times;</button>
                                     </label>
                                 </div> 
                                                           
