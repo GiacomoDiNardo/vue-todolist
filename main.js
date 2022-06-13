@@ -21,7 +21,7 @@ new Vue({
     methods : {
         itsDone: function(index) {
             this.listToDo[index].done === true;
-        }
+        },
     }
 
 })
