@@ -15,7 +15,9 @@ new Vue({
                 text: "Tagliare prato",
                 done: false,
             },
-        ]
+        ],
+
+        newTask: ""
     },
 
     methods : {
@@ -25,6 +27,19 @@ new Vue({
 
         deleteTask: function (index) {
             this.listToDo.splice(index, 1)
+        },
+
+        addTask: function() {
+            if (this.newTask.trim() === "") {
+                return
+            }
+
+            this.listToDo.push({
+                text: this.newTask,
+                done: false,
+            });
+
+            this.newTask = ""
         }
     }
 
